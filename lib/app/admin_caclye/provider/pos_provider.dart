@@ -165,7 +165,7 @@ class PosProvider with ChangeNotifier {
 
   List<ps.Datum> _allSessionsSearchResult = [];
 
-  OpenPosSession _openPosSession = OpenPosSession();
+  final OpenPosSession _openPosSession = OpenPosSession();
 
   CurrentSession _currentSession = CurrentSession();
   allkiosk.AllKioskOrders _allKioskOrders = allkiosk.AllKioskOrders();
@@ -308,13 +308,13 @@ class PosProvider with ChangeNotifier {
   //   getAllPos();
   // }
 
-  Future<void> openNewPosSession(int posId, int cashierId, int currencyId, double openingBalance, String openingNote) async {
-    _openPosSession = (await PosApis().openNewPosSession(posId, cashierId, currencyId, openingBalance, openingNote))!;
+  // Future<void> openNewPosSession(int posId, int cashierId, int currencyId, double openingBalance, String openingNote) async {
+  //   _openPosSession = (await PosApis().openNewPosSession(posId, cashierId, currencyId, openingBalance, openingNote))!;
 
-    await getCurrentSessionData(posId);
+  //   await getCurrentSessionData(posId);
 
-    //  notifyListeners();
-  }
+  //   //  notifyListeners();
+  // }
 
   Future<Map<String, dynamic>> checkForActiveSessions(int posId, int cashierId) async {
     // Future<bool> checkForActiveSessions(int posId, int cashierId) async {

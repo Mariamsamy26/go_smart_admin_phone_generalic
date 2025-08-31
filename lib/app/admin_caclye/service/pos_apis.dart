@@ -1,14 +1,14 @@
-import 'package:go_smart_admin_windos/app/admin_caclye/models/db_name_record_data.dart';
+import 'package:go_smart_admin/app/admin_caclye/models/db_name_record_data.dart';
 import 'package:dio/dio.dart';
-import 'package:go_smart_admin_windos/app/admin_caclye/models/all_pos.dart';
-import 'package:go_smart_admin_windos/app/admin_caclye/models/all_kiosk_orders.dart' as allkiosk;
-import 'package:go_smart_admin_windos/app/admin_caclye/models/all_session_orders.dart';
-import 'package:go_smart_admin_windos/app/admin_caclye/models/current_session.dart';
-import 'package:go_smart_admin_windos/app/admin_caclye/models/generate_delivery_payment.dart';
-import 'package:go_smart_admin_windos/app/admin_caclye/models/open_pos_session.dart';
-import 'package:go_smart_admin_windos/app/admin_caclye/models/pos_sessions.dart';
-import 'package:go_smart_admin_windos/app/admin_caclye/models/register_delivery_payment.dart';
-import 'package:go_smart_admin_windos/helpers/dio_client.dart';
+import 'package:go_smart_admin/app/admin_caclye/models/all_pos.dart';
+import 'package:go_smart_admin/app/admin_caclye/models/all_kiosk_orders.dart' as allkiosk;
+import 'package:go_smart_admin/app/admin_caclye/models/all_session_orders.dart';
+import 'package:go_smart_admin/app/admin_caclye/models/current_session.dart';
+import 'package:go_smart_admin/app/admin_caclye/models/generate_delivery_payment.dart';
+import 'package:go_smart_admin/app/admin_caclye/models/open_pos_session.dart';
+import 'package:go_smart_admin/app/admin_caclye/models/pos_sessions.dart';
+import 'package:go_smart_admin/app/admin_caclye/models/register_delivery_payment.dart';
+import 'package:go_smart_admin/services/dio_client.dart';
 
 class PosApis {
   static const int _maxRetries = 20;

@@ -1,6 +1,6 @@
-import 'package:go_smart_admin_windos/app/auth_branches_caclye/model/check_admin_login.dart';
-import 'package:go_smart_admin_windos/app/auth_branches_caclye/model/login_model.dart';
-import 'package:go_smart_admin_windos/helpers/dio_client.dart';
+import 'package:go_smart_admin/app/auth_branches_caclye/model/check_admin_login.dart';
+import 'package:go_smart_admin/app/auth_branches_caclye/model/login_model.dart';
+import 'package:go_smart_admin/services/dio_client.dart';
 
 class AuthApis {
   Future<CheckAdminLogin?> checkAdminLogin(String email, String password) async {

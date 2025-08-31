@@ -92,7 +92,7 @@ class _LoginScreenState extends State<LoginScreen> {
           await AuthApis().setClientuniqueId(emailController.text.trim(), passwordController.text, deviceId.trim());
           showDialog(
             context: context,
-            builder: (context) => OkDialog(text: loginData.message!),
+            builder: (context) => OkDialog(text: loginData.messageAr!),
           );
         }
       }
