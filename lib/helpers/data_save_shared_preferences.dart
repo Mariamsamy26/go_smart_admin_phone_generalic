@@ -1,11 +1,6 @@
 import 'dart:convert';
-<<<<<<< HEAD
-import 'package:go_smart_admin_windos/app/auth_branches_caclye/model/check_admin_login.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-=======
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:go_smart_admin/app/auth_branches_caclye/model/check_admin_login.dart';
->>>>>>> 2324e96 (staple)
 
 class DataSaveSharedPreferences {
   String savedEmail = '';

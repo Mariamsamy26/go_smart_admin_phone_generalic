@@ -1,11 +1,6 @@
 import 'package:flutter/material.dart';
-<<<<<<< HEAD
-import 'package:go_smart_admin_windos/app/auth_branches_caclye/providers/auth_provider.dart';
-import 'package:go_smart_admin_windos/styles/colors.dart';
-=======
 import 'package:go_smart_admin/app/auth_branches_caclye/providers/auth_provider.dart';
 import 'package:go_smart_admin/styles/colors.dart';
->>>>>>> 2324e96 (staple)
 import 'package:percent_indicator/linear_percent_indicator.dart';
 import 'package:provider/provider.dart';
 

@@ -1,7 +1,5 @@
-
-import 'package:go_smart_admin_windos/app/auth_branches_caclye/model/check_admin_login.dart';
-import 'package:go_smart_admin_windos/app/auth_branches_caclye/services/auth_apis.dart';
-
+import 'package:go_smart_admin/app/auth_branches_caclye/model/check_admin_login.dart';
+import 'package:go_smart_admin/app/auth_branches_caclye/services/auth_apis.dart';
 import 'package:flutter/material.dart';
 
 class AuthProvider with ChangeNotifier {

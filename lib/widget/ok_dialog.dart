@@ -1,18 +1,9 @@
-<<<<<<< HEAD
-import 'package:easy_localization/easy_localization.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:go_smart_admin_windos/helpers/navigation_helper.dart';
-import 'package:go_smart_admin_windos/styles/colors.dart';
-import 'package:go_smart_admin_windos/styles/text_style.dart';
-=======
 import 'package:go_smart_admin/helpers/navigation_helper.dart';
 import 'package:go_smart_admin/styles/colors.dart';
 import 'package:go_smart_admin/styles/text_style.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
->>>>>>> 2324e96 (staple)
 import 'package:google_fonts/google_fonts.dart';
 
 class OkDialog extends StatelessWidget {

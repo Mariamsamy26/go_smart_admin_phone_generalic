@@ -3,15 +3,6 @@
 // import 'package:flutter/material.dart';
 // import 'package:flutter/services.dart';
 // import 'package:flutter_screenutil/flutter_screenutil.dart';
-<<<<<<< HEAD
-// import 'package:go_smart_admin_windos/app/admin_caclye.dart/models/cart_item.dart';
-// import 'package:go_smart_admin_windos/app/admin_caclye.dart/providers/menu_provider.dart';
-// import 'package:go_smart_admin_windos/app/pos_cycle/providers/pos_provider.dart';
-// import 'package:go_smart_admin_windos/helpers/application_dimentions.dart';
-// import 'package:go_smart_admin_windos/helpers/navigation_helper.dart';
-// import 'package:go_smart_admin_windos/styles/colors.dart';
-// import 'package:go_smart_admin_windos/widget/buttons.dart';
-=======
 // import 'package:go_smart_admin/app/admin_caclye.dart/models/cart_item.dart';
 // import 'package:go_smart_admin/app/admin_caclye.dart/providers/menu_provider.dart';
 // import 'package:go_smart_admin/app/pos_cycle/providers/pos_provider.dart';
@@ -19,7 +10,6 @@
 // import 'package:go_smart_admin/helpers/navigation_helper.dart';
 // import 'package:go_smart_admin/styles/colors.dart';
 // import 'package:go_smart_admin/widget/buttons.dart';
->>>>>>> 2324e96 (staple)
 // import 'package:provider/provider.dart';
 
 // class AddPromotionDialog extends StatefulWidget {

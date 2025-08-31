@@ -1,16 +1,9 @@
 import 'package:easy_localization/easy_localization.dart' as ez;
 import 'package:flutter/material.dart';
-<<<<<<< HEAD
-import 'package:go_smart_admin_windos/helpers/application_dimentions.dart';
-import 'package:go_smart_admin_windos/helpers/navigation_helper.dart';
-import 'package:go_smart_admin_windos/styles/text_style.dart';
-import 'package:go_smart_admin_windos/widget/buttons.dart';
-=======
 import 'package:go_smart_admin/helpers/application_dimentions.dart';
 import 'package:go_smart_admin/helpers/navigation_helper.dart';
 import 'package:go_smart_admin/styles/text_style.dart';
 import 'package:go_smart_admin/widget/buttons.dart';
->>>>>>> 2324e96 (staple)
 
 class RefundRequestDialog extends StatefulWidget {
   const RefundRequestDialog({super.key});

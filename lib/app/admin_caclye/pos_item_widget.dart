@@ -1,26 +1,15 @@
-<<<<<<< HEAD
-import 'package:go_smart_admin_windos/app/admin_caclye/view/all_sessions_screen.dart';
-import 'package:go_smart_admin_windos/app/admin_caclye/provider/pos_provider.dart';
-import 'package:go_smart_admin_windos/styles/colors.dart';
-=======
 import 'package:dotted_line/dotted_line.dart';
 import 'package:go_smart_admin/app/admin_caclye/view/all_sessions_screen.dart';
 import 'package:go_smart_admin/app/admin_caclye/provider/pos_provider.dart';
 import 'package:go_smart_admin/styles/colors.dart';
->>>>>>> 2324e96 (staple)
 
 import 'package:provider/provider.dart';
 
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-<<<<<<< HEAD
-import 'package:go_smart_admin_windos/helpers/navigation_helper.dart';
-import 'package:go_smart_admin_windos/styles/text_style.dart';
-=======
 import 'package:go_smart_admin/helpers/navigation_helper.dart';
 import 'package:go_smart_admin/styles/text_style.dart';
->>>>>>> 2324e96 (staple)
 
 class PosItemWidget extends StatelessWidget {
   final int id;

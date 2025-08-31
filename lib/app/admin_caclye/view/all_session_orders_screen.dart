@@ -3,20 +3,12 @@ import 'dart:developer';
 import 'package:easy_localization/easy_localization.dart' as ez;
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-<<<<<<< HEAD
-import 'package:go_smart_admin_windos/app/admin_caclye/dialogs/order_details_dialog.dart';
-import 'package:go_smart_admin_windos/app/admin_caclye/provider/pos_provider.dart';
-import 'package:go_smart_admin_windos/helpers/application_dimentions.dart';
-import 'package:go_smart_admin_windos/styles/colors.dart';
-import 'package:go_smart_admin_windos/styles/text_style.dart';
-=======
 import 'package:go_smart_admin/app/admin_caclye/dialogs/order_details_dialog.dart';
 import 'package:go_smart_admin/app/admin_caclye/provider/pos_provider.dart';
 import 'package:go_smart_admin/helpers/application_dimentions.dart';
 import 'package:go_smart_admin/app/auth_branches_caclye/providers/auth_provider.dart';
 import 'package:go_smart_admin/styles/colors.dart';
 import 'package:go_smart_admin/styles/text_style.dart';
->>>>>>> 2324e96 (staple)
 import 'package:provider/provider.dart';
 import 'package:screenshot/screenshot.dart';
 
@@ -80,20 +72,12 @@ class _AllSessionOrdersScreenState extends State<AllSessionOrdersScreen> {
                           onTap: () {
                             Navigator.of(context).pop();
                           },
-<<<<<<< HEAD
-                          child: Icon(Icons.arrow_back, size: 25.sp, color: goSmartBlue),
-                        ),
-
-                        // Padding(
-                        //   padding: const EdgeInsets.only(left: 30),
-=======
                           child: Icon(Icons.arrow_back_ios_new, size: 20.sp, color: goSmartBlue),
                         ),
                         SizedBox(width: 20.w),
 
                         // Padding(
                         //   padding: EdgeInsets.symmetric(horizontal: 10.w),
->>>>>>> 2324e96 (staple)
                         //   child: Column(
                         //     mainAxisAlignment: MainAxisAlignment.start,
                         //     crossAxisAlignment: CrossAxisAlignment.start,
@@ -102,42 +86,19 @@ class _AllSessionOrdersScreenState extends State<AllSessionOrdersScreen> {
                         //       Text(
                         //         // posProviderRead.currentSession.data![0].cashierName!,
                         //         widget.cashierName,
-<<<<<<< HEAD
-                        //         style: mediumText.copyWith(
-                        //           color: Colors.grey[400],
-                        //           fontSize: 17.sp,
-                        //         ),
-                        //       ),
-                        //       SizedBox(height: 5.h),
-                        //       Text(
-                        //         'cashier'.tr(),
-                        //         style: mediumText.copyWith(
-                        //           color: Colors.grey[350],
-                        //           fontSize: 14.sp,
-                        //         ),
-                        //       ),
-=======
                         //         style: TextStyle(color: Colors.grey[400], fontSize: 14.sp),
                         //       ),
                         //       SizedBox(height: 5.h),
                         //       Text('cashier'.tr(), style: TextStyle(color: Colors.grey[350])),
->>>>>>> 2324e96 (staple)
                         //     ],
                         //   ),
                         // ),
                         Expanded(
-<<<<<<< HEAD
-                          flex: 6,
-                          child: Container(
-                            margin: const EdgeInsets.only(left: 70),
-                            height: 40.h,
-=======
                           flex: 5,
                           child: Container(
                             alignment: Alignment.center,
                             height: 40.h,
                             width: 50.w,
->>>>>>> 2324e96 (staple)
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20.r),
                               border: Border.all(color: Colors.grey[300]!),
@@ -150,21 +111,12 @@ class _AllSessionOrdersScreenState extends State<AllSessionOrdersScreen> {
                               decoration: InputDecoration(
                                 isDense: true,
                                 hintText: 'search'.tr(),
-<<<<<<< HEAD
-                                hintStyle: mediumText.copyWith(color: const Color(0xffA6B3BA).withOpacity(0.9), fontSize: 17.sp),
-                                border: textBorder,
-                                errorBorder: textBorder,
-                                enabledBorder: textBorder,
-                                focusedBorder: textBorder,
-                                contentPadding: const EdgeInsets.symmetric(vertical: 6),
-=======
                                 hintStyle: TextStyle(color: const Color(0xffA6B3BA).withOpacity(0.5), fontSize: 17.sp),
                                 border: InputBorder.none,
                                 errorBorder: InputBorder.none,
                                 enabledBorder: InputBorder.none,
                                 focusedBorder: InputBorder.none,
                                 contentPadding: EdgeInsets.symmetric(vertical: 6),
->>>>>>> 2324e96 (staple)
                                 prefixIcon: Padding(
                                   padding: const EdgeInsets.all(9.0),
                                   child: Image.asset('assets/images/search.png', height: 15, width: 15, color: goSmartBlue),
@@ -173,11 +125,7 @@ class _AllSessionOrdersScreenState extends State<AllSessionOrdersScreen> {
                                   onTap: () {
                                     posProviderRead.clearSearchAllOrdersList();
                                     searchController.clear();
-<<<<<<< HEAD
-                                    FocusScope.of(context).unfocus(); // Dismiss the keyboard
-=======
                                     FocusScope.of(context).unfocus();
->>>>>>> 2324e96 (staple)
                                   },
                                   child: const Icon(Icons.clear),
                                 ),
@@ -185,47 +133,25 @@ class _AllSessionOrdersScreenState extends State<AllSessionOrdersScreen> {
                             ),
                           ),
                         ),
-<<<<<<< HEAD
-                        SizedBox(width: 50.w),
-
-                        //*
-                        Text('GO Smart ', style: mediumText),
-                        Text('POS', style: mediumText.copyWith(color: goSmartBlue)),
-                        //*
-                        SizedBox(width: 10.w),
-=======
                         SizedBox(width: 10.w),
                         //*
->>>>>>> 2324e96 (staple)
                         ClipRRect(
                           borderRadius: BorderRadius.circular(8),
                           child: Image.asset('assets/images/gg.png', height: 50.h, width: 50.w),
                         ),
-<<<<<<< HEAD
-                        SizedBox(width: 30.w),
-=======
                         SizedBox(width: 10.w),
->>>>>>> 2324e96 (staple)
                       ],
                     ),
                   ),
                   //* //*
                   SizedBox(height: 5.h),
-<<<<<<< HEAD
-                  const Divider(indent: 20, endIndent: 20),
-=======
                   const Divider(indent: 10, endIndent: 10),
->>>>>>> 2324e96 (staple)
                   SizedBox(height: 5.h),
                   //* //*
                   //* START OF SESSIONS TREE
                   Expanded(
                     child: Padding(
-<<<<<<< HEAD
-                      padding: const EdgeInsets.all(20.0),
-=======
                       padding: const EdgeInsets.all(10.0),
->>>>>>> 2324e96 (staple)
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -241,11 +167,7 @@ class _AllSessionOrdersScreenState extends State<AllSessionOrdersScreen> {
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       SizedBox(width: 20.w),
-<<<<<<< HEAD
-                                      Text('orders'.tr(), style: boldText.copyWith(fontSize: 18.sp)),
-=======
                                       Text('orders'.tr(), style: boldText.copyWith(fontSize: 16.sp)),
->>>>>>> 2324e96 (staple)
                                       const Spacer(),
                                       //* NOT FOR ADMIN
                                       // if (posProviderWatch.loginData.role!.toLowerCase() != 'admin')
@@ -291,9 +213,6 @@ class _AllSessionOrdersScreenState extends State<AllSessionOrdersScreen> {
                                           SizedBox(width: 20.w),
                                           DropdownButton(
                                             value: filterChoice,
-<<<<<<< HEAD
-                                            items: filters.map((e) => DropdownMenuItem(value: e, child: Text(e.tr()))).toList(),
-=======
                                             items: filters
                                                 .map(
                                                   (e) => DropdownMenuItem(
@@ -302,7 +221,6 @@ class _AllSessionOrdersScreenState extends State<AllSessionOrdersScreen> {
                                                   ),
                                                 )
                                                 .toList(),
->>>>>>> 2324e96 (staple)
                                             onChanged: (value) {
                                               setFilterChoice(value!);
 
@@ -344,23 +262,6 @@ class _AllSessionOrdersScreenState extends State<AllSessionOrdersScreen> {
                                         mainAxisAlignment: MainAxisAlignment.start,
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
-<<<<<<< HEAD
-                                          Expanded(
-                                            flex: 1,
-                                            child: Container(
-                                              alignment: Alignment.centerLeft,
-                                              margin: EdgeInsets.symmetric(horizontal: 50.w),
-                                              height: 22.h,
-                                              width: 20.w,
-                                              decoration: BoxDecoration(
-                                                border: Border.all(color: Colors.grey),
-                                                borderRadius: BorderRadius.circular(3.r),
-                                              ),
-                                            ),
-                                          ),
-                                          Expanded(flex: 3, child: Text('order_number'.tr(), textAlign: TextAlign.start)),
-                                          Expanded(flex: 2, child: Text('date'.tr(), textAlign: TextAlign.start)),
-=======
                                           // Expanded(
                                           //   flex: 1,
                                           //   child: Container(
@@ -376,7 +277,6 @@ class _AllSessionOrdersScreenState extends State<AllSessionOrdersScreen> {
                                           // ),
                                           Expanded(flex: 3, child: Text('order_number'.tr(), textAlign: TextAlign.center)),
                                           Expanded(flex: 3, child: Text('date'.tr(), textAlign: TextAlign.center)),
->>>>>>> 2324e96 (staple)
                                           Expanded(flex: 2, child: Text('order_type'.tr(), textAlign: TextAlign.center)),
                                           Expanded(flex: 2, child: Text('total'.tr(), textAlign: TextAlign.center)),
                                         ],
@@ -418,44 +318,6 @@ class _AllSessionOrdersScreenState extends State<AllSessionOrdersScreen> {
                                                 mainAxisAlignment: MainAxisAlignment.start,
                                                 mainAxisSize: MainAxisSize.max,
                                                 children: [
-<<<<<<< HEAD
-                                                  SizedBox(width: 5.w),
-                                                  Expanded(
-                                                    flex: 1,
-                                                    child: Container(
-                                                      alignment: Alignment.centerLeft,
-                                                      margin: EdgeInsets.symmetric(horizontal: 50.w),
-                                                      height: 22.h,
-                                                      width: 20.w,
-                                                      decoration: BoxDecoration(
-                                                        border: Border.all(color: Colors.grey),
-                                                        borderRadius: BorderRadius.circular(3.r),
-                                                      ),
-                                                    ),
-                                                  ),
-                                                  Expanded(
-                                                    flex: 3,
-                                                    child: Row(
-                                                      mainAxisAlignment: MainAxisAlignment.start,
-                                                      mainAxisSize: MainAxisSize.min,
-                                                      children: [
-                                                        if (posProviderWatch.allOrdersSearchResults[index].isKioskOrder!)
-                                                          Image.asset('assets/images/kiosk.png', height: 20.h, width: 20.w),
-                                                        Text(
-                                                          posProviderWatch.allOrdersSearchResults[index].posReference!,
-                                                          textAlign: TextAlign.start,
-                                                        ),
-                                                      ],
-                                                    ),
-                                                  ),
-                                                  Expanded(
-                                                    flex: 2,
-                                                    child: Text(
-                                                      ez.DateFormat(
-                                                        'dd-MM-yyyy hh:mm a',
-                                                      ).format(posProviderWatch.allOrdersSearchResults[index].dateOrder!),
-                                                      textAlign: TextAlign.start,
-=======
                                                   Expanded(
                                                     flex: 3,
                                                     child: FittedBox(
@@ -490,7 +352,6 @@ class _AllSessionOrdersScreenState extends State<AllSessionOrdersScreen> {
                                                         ).format(posProviderWatch.allOrdersSearchResults[index].dateOrder!),
                                                         textAlign: TextAlign.center,
                                                       ),
->>>>>>> 2324e96 (staple)
                                                     ),
                                                   ),
                                                   Expanded(
@@ -504,11 +365,6 @@ class _AllSessionOrdersScreenState extends State<AllSessionOrdersScreen> {
                                                   ),
                                                   Expanded(
                                                     flex: 2,
-<<<<<<< HEAD
-                                                    child: Text(
-                                                      '${posProviderWatch.allOrdersSearchResults[index].amountTotal!.toStringAsFixed(2)} ${'egp'.tr()}',
-                                                      textAlign: TextAlign.center,
-=======
                                                     child: FittedBox(
                                                       fit: BoxFit.scaleDown,
                                                       child: Text(
@@ -517,13 +373,10 @@ class _AllSessionOrdersScreenState extends State<AllSessionOrdersScreen> {
                                                         textAlign: TextAlign.center,
                                                         style: mediumText,
                                                       ),
->>>>>>> 2324e96 (staple)
                                                     ),
                                                   ),
                                                 ],
                                               ),
-<<<<<<< HEAD
-=======
                                               // Row(
                                               //   mainAxisAlignment: MainAxisAlignment.start,
                                               //   mainAxisSize: MainAxisSize.max,
@@ -579,7 +432,6 @@ class _AllSessionOrdersScreenState extends State<AllSessionOrdersScreen> {
                                               //     ),
                                               //   ],
                                               // ),
->>>>>>> 2324e96 (staple)
                                             );
                                           },
                                         ),
@@ -609,44 +461,6 @@ class _AllSessionOrdersScreenState extends State<AllSessionOrdersScreen> {
                                               mainAxisAlignment: MainAxisAlignment.start,
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
-<<<<<<< HEAD
-                                                SizedBox(width: 5.w),
-                                                Expanded(
-                                                  flex: 1,
-                                                  child: Container(
-                                                    alignment: Alignment.centerLeft,
-                                                    margin: EdgeInsets.symmetric(horizontal: 50.w),
-                                                    height: 22.h,
-                                                    width: 20.w,
-                                                    decoration: BoxDecoration(
-                                                      border: Border.all(color: Colors.grey),
-                                                      borderRadius: BorderRadius.circular(3.r),
-                                                    ),
-                                                  ),
-                                                ),
-                                                Expanded(
-                                                  flex: 3,
-                                                  child: Row(
-                                                    mainAxisAlignment: MainAxisAlignment.start,
-                                                    mainAxisSize: MainAxisSize.min,
-                                                    children: [
-                                                      if (posProviderWatch.allSessionOrders.data![index].isKioskOrder!)
-                                                        Image.asset('assets/images/kiosk.png', height: 20.h, width: 20.w),
-                                                      Text(
-                                                        posProviderWatch.allSessionOrders.data![index].posReference!,
-                                                        textAlign: TextAlign.start,
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ),
-                                                Expanded(
-                                                  flex: 2,
-                                                  child: Text(
-                                                    ez.DateFormat(
-                                                      'dd-MM-yyyy hh:mm a',
-                                                    ).format(posProviderWatch.allSessionOrders.data![index].dateOrder!),
-                                                    textAlign: TextAlign.start,
-=======
                                                 Expanded(
                                                   flex: 3,
                                                   child: FittedBox(
@@ -681,7 +495,6 @@ class _AllSessionOrdersScreenState extends State<AllSessionOrdersScreen> {
                                                       ).format(posProviderWatch.allSessionOrders.data![index].dateOrder!),
                                                       textAlign: TextAlign.center,
                                                     ),
->>>>>>> 2324e96 (staple)
                                                   ),
                                                 ),
                                                 Expanded(
@@ -695,11 +508,6 @@ class _AllSessionOrdersScreenState extends State<AllSessionOrdersScreen> {
                                                 ),
                                                 Expanded(
                                                   flex: 2,
-<<<<<<< HEAD
-                                                  child: Text(
-                                                    '${posProviderWatch.allSessionOrders.data![index].amountTotal!.toStringAsFixed(2)} ${'egp'.tr()}',
-                                                    textAlign: TextAlign.center,
-=======
                                                   child: FittedBox(
                                                     fit: BoxFit.scaleDown,
                                                     child: Text(
@@ -708,7 +516,6 @@ class _AllSessionOrdersScreenState extends State<AllSessionOrdersScreen> {
                                                       textAlign: TextAlign.center,
                                                       style: mediumText,
                                                     ),
->>>>>>> 2324e96 (staple)
                                                   ),
                                                 ),
                                               ],
@@ -884,11 +691,7 @@ class _AllSessionOrdersScreenState extends State<AllSessionOrdersScreen> {
               //                 const Spacer(),
               //                 Text(
               //                   '${posProviderWatch.kioskOrderTotal.toStringAsFixed(2)} ${'egp'.tr()}',
-<<<<<<< HEAD
-              //                   style: mediumText.copyWith(
-=======
               //                   style: TextStyle(
->>>>>>> 2324e96 (staple)
               //                     fontSize: 25.sp,
               //                   ),
               //                 ),
@@ -898,11 +701,7 @@ class _AllSessionOrdersScreenState extends State<AllSessionOrdersScreen> {
               //             Text(
               //               'الاسعار تشمل ضريبة القيمة المضافة',
               //               textAlign: TextAlign.center,
-<<<<<<< HEAD
-              //               style: mediumText.copyWith(
-=======
               //               style: TextStyle(
->>>>>>> 2324e96 (staple)
               //                 fontSize: 15.sp,
               //               ),
               //             ),
@@ -910,11 +709,7 @@ class _AllSessionOrdersScreenState extends State<AllSessionOrdersScreen> {
               //             Text(
               //               'order_reference'.tr(),
               //               textAlign: TextAlign.center,
-<<<<<<< HEAD
-              //               style: mediumText.copyWith(
-=======
               //               style: TextStyle(
->>>>>>> 2324e96 (staple)
               //                 fontSize: 15.sp,
               //               ),
               //             ),
@@ -938,11 +733,7 @@ class _AllSessionOrdersScreenState extends State<AllSessionOrdersScreen> {
               //                 const Spacer(),
               //                 Text(
               //                   '01001000111',
-<<<<<<< HEAD
-              //                   style: mediumText.copyWith(
-=======
               //                   style: TextStyle(
->>>>>>> 2324e96 (staple)
               //                     fontSize: 18.sp,
               //                   ),
               //                 ),
@@ -952,11 +743,7 @@ class _AllSessionOrdersScreenState extends State<AllSessionOrdersScreen> {
               //             Text(
               //               'Powered By gosmart.eg',
               //               textAlign: TextAlign.center,
-<<<<<<< HEAD
-              //               style: mediumText.copyWith(
-=======
               //               style: TextStyle(
->>>>>>> 2324e96 (staple)
               //                 fontSize: 13.sp,
               //               ),
               //             ),

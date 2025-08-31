@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-<<<<<<< HEAD
-import 'package:go_smart_admin_windos/widget/loading_gif_dialog.dart';
-=======
 import 'package:go_smart_admin/widget/loading_gif_dialog.dart';
->>>>>>> 2324e96 (staple)
 
 class Navigation {
   void goToScreen(BuildContext context, Widget Function(BuildContext context) pageName) {

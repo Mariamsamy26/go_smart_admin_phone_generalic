@@ -1,18 +1,9 @@
-<<<<<<< HEAD
-import 'package:go_smart_admin_windos/app/admin_caclye/services/pos_apis.dart';
-import 'package:go_smart_admin_windos/app/admin_caclye/view/admin_inappwebview_screen.dart';
-import 'package:go_smart_admin_windos/helpers/navigation_helper.dart';
-import 'package:go_smart_admin_windos/app/auth_branches_caclye/view/login_screen.dart';
-import 'package:go_smart_admin_windos/app/auth_branches_caclye/model/check_admin_login.dart';
-import 'package:go_smart_admin_windos/styles/colors.dart';
-=======
 import 'package:go_smart_admin/app/admin_caclye/service/pos_apis.dart';
 import 'package:go_smart_admin/app/admin_caclye/view/admain_webview_screen.dart';
 import 'package:go_smart_admin/helpers/navigation_helper.dart';
 import 'package:go_smart_admin/app/auth_branches_caclye/view/login_screen.dart';
 import 'package:go_smart_admin/app/auth_branches_caclye/model/check_admin_login.dart';
 import 'package:go_smart_admin/styles/colors.dart';
->>>>>>> 2324e96 (staple)
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -90,23 +81,6 @@ class _BranchesScreenState extends State<BranchesScreen> {
         centerTitle: true,
         elevation: 1,
         backgroundColor: goSmartBlue,
-<<<<<<< HEAD
-        leading: Padding(
-          padding: const EdgeInsets.only(left: 12),
-          child: IconButton(
-            onPressed: () async {
-              final prefs = await SharedPreferences.getInstance();
-              await prefs.clear();
-              if (!mounted) return;
-              Navigation().goToScreenAndClearAll(context, (c) => const LoginScreen());
-            },
-            icon: const Icon(Icons.logout_outlined, color: white),
-          ),
-        ),
-        actions: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-=======
         leading: IconButton(
           onPressed: () async {
             final prefs = await SharedPreferences.getInstance();
@@ -119,7 +93,6 @@ class _BranchesScreenState extends State<BranchesScreen> {
         actions: [
           Padding(
             padding: const EdgeInsets.all(5),
->>>>>>> 2324e96 (staple)
             child: ClipRRect(
               borderRadius: BorderRadius.circular(6),
               child: Image.asset("assets/images/Go_Smart-outout.png", fit: BoxFit.contain),
@@ -136,11 +109,7 @@ class _BranchesScreenState extends State<BranchesScreen> {
               controller: _searchCtrl,
               textInputAction: TextInputAction.search,
               decoration: InputDecoration(
-<<<<<<< HEAD
-                hintText: 'ابحث عن الفرع',
-=======
                 hintText: 'بحث عن فرع',
->>>>>>> 2324e96 (staple)
                 prefixIcon: const Icon(Icons.search),
                 filled: true,
                 fillColor: theme.colorScheme.surface.withOpacity(0.4),
@@ -154,18 +123,6 @@ class _BranchesScreenState extends State<BranchesScreen> {
           Expanded(
             child: _filtered.isEmpty
                 ? Center(
-<<<<<<< HEAD
-                    child: Text('لم يتم العثور على  الفرع', style: theme.textTheme.bodyMedium?.copyWith(color: theme.hintColor)),
-                  )
-                : GridView.builder(
-                    padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 5,
-                      crossAxisSpacing: 12,
-                      mainAxisSpacing: 12,
-                      childAspectRatio: 1,
-                      mainAxisExtent: 0.2.sh,
-=======
                     child: Text('لا يوجد فروع', style: theme.textTheme.bodyMedium?.copyWith(color: theme.hintColor)),
                   )
                 : GridView.builder(
@@ -176,7 +133,6 @@ class _BranchesScreenState extends State<BranchesScreen> {
                       mainAxisSpacing: 12,
                       childAspectRatio: 1,
                       mainAxisExtent: 150,
->>>>>>> 2324e96 (staple)
                     ),
                     itemCount: _filtered.length,
                     itemBuilder: (context, index) {
@@ -206,6 +162,13 @@ class _BranchesScreenState extends State<BranchesScreen> {
                             ),
                             const SizedBox(height: 6),
                             Text(name, maxLines: 2, textAlign: TextAlign.center, overflow: TextOverflow.ellipsis),
+                            // const SizedBox(height: 2),
+                            // Text(
+                            //   branch.dbName!,
+                            //   maxLines: 1,
+                            //   overflow: TextOverflow.ellipsis,
+                            //   style: theme.textTheme.bodySmall?.copyWith(color: theme.hintColor),
+                            // ),
                           ],
                         ),
                       );
@@ -227,13 +190,8 @@ class _BranchAvatar extends StatelessWidget {
     final hasNet = imageUrl.trim().isNotEmpty && (imageUrl.startsWith('http://') || imageUrl.startsWith('https://'));
 
     return SizedBox(
-<<<<<<< HEAD
-      width: 75.w,
-      height: 80.h,
-=======
       width: 70.w,
       height: 60.h,
->>>>>>> 2324e96 (staple)
       child: hasNet
           ? Image.network(
               imageUrl,

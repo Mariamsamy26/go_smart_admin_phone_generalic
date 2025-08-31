@@ -1,27 +1,6 @@
 import 'dart:developer';
 import 'dart:io';
 
-<<<<<<< HEAD
-import 'package:easy_localization/easy_localization.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:go_smart_admin_windos/app/admin_caclye/models/all_pos.dart';
-import 'package:go_smart_admin_windos/app/admin_caclye/models/all_kiosk_orders.dart' as allkiosk;
-import 'package:go_smart_admin_windos/app/admin_caclye/models/all_session_orders.dart' as allsessionorders;
-import 'package:go_smart_admin_windos/app/admin_caclye/models/all_users.dart' as du;
-import 'package:go_smart_admin_windos/app/admin_caclye/models/available_payment_methods.dart';
-import 'package:go_smart_admin_windos/app/admin_caclye/models/current_session.dart';
-import 'package:go_smart_admin_windos/app/admin_caclye/models/open_pos_session.dart';
-import 'package:go_smart_admin_windos/app/admin_caclye/models/pos_sessions.dart' as ps;
-import 'package:go_smart_admin_windos/app/admin_caclye/services/pos_apis.dart';
-import 'package:go_smart_admin_windos/app/auth_branches_caclye/model/login_model.dart';
-import 'package:go_smart_admin_windos/helpers/navigation_helper.dart';
-import 'package:go_smart_admin_windos/main.dart';
-import 'package:go_smart_admin_windos/widget/unclosable_ok_dialog.dart';
-import 'package:screenshot/screenshot.dart';
-import 'package:image/image.dart' as img;
-// import 'package:gosmart_pos/app/pos_cycle/models/search_by_receipt.dart' as refundorder;
-=======
 import 'package:go_smart_admin/app/auth_branches_caclye/model/login_model.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -40,7 +19,6 @@ import 'package:go_smart_admin/main.dart';
 import 'package:go_smart_admin/widget/unclosable_ok_dialog.dart';
 import 'package:screenshot/screenshot.dart';
 import 'package:image/image.dart' as img;
->>>>>>> 2324e96 (staple)
 
 class PosProvider with ChangeNotifier {
   final bool _connectState = true;
@@ -187,11 +165,7 @@ class PosProvider with ChangeNotifier {
 
   List<ps.Datum> _allSessionsSearchResult = [];
 
-<<<<<<< HEAD
-  final OpenPosSession _openPosSession = OpenPosSession();
-=======
   OpenPosSession _openPosSession = OpenPosSession();
->>>>>>> 2324e96 (staple)
 
   CurrentSession _currentSession = CurrentSession();
   allkiosk.AllKioskOrders _allKioskOrders = allkiosk.AllKioskOrders();
@@ -334,13 +308,13 @@ class PosProvider with ChangeNotifier {
   //   getAllPos();
   // }
 
-  // Future<void> openNewPosSession(int posId, int cashierId, int currencyId, double openingBalance, String openingNote) async {
-  //   _openPosSession = (await PosApis().openNewPosSession(posId, cashierId, currencyId, openingBalance, openingNote))!;
+  Future<void> openNewPosSession(int posId, int cashierId, int currencyId, double openingBalance, String openingNote) async {
+    _openPosSession = (await PosApis().openNewPosSession(posId, cashierId, currencyId, openingBalance, openingNote))!;
 
-  //   await getCurrentSessionData(posId);
+    await getCurrentSessionData(posId);
 
-  //   //  notifyListeners();
-  // }
+    //  notifyListeners();
+  }
 
   Future<Map<String, dynamic>> checkForActiveSessions(int posId, int cashierId) async {
     // Future<bool> checkForActiveSessions(int posId, int cashierId) async {

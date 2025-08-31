@@ -1,16 +1,6 @@
 // import 'package:easy_localization/easy_localization.dart' as ez;
 // import 'package:flutter/material.dart';
 // import 'package:flutter_screenutil/flutter_screenutil.dart';
-<<<<<<< HEAD
-// import 'package:go_smart_admin_windos/app/auth_cycle/views/login_screen.dart';
-// import 'package:go_smart_admin_windos/app/pos_cycle/services/pos_apis.dart';
-// import 'package:go_smart_admin_windos/app/pos_cycle/views/home_screen.dart';
-// import 'package:go_smart_admin_windos/helpers/application_dimentions.dart';
-// import 'package:go_smart_admin_windos/helpers/navigation_helper.dart';
-// import 'package:go_smart_admin_windos/styles/colors.dart';
-// import 'package:go_smart_admin_windos/widget/buttons.dart';
-// import 'package:go_smart_admin_windos/widget/unclosable_ok_dialog.dart';
-=======
 // import 'package:go_smart_admin/app/auth_cycle/views/login_screen.dart';
 // import 'package:go_smart_admin/app/pos_cycle/services/pos_apis.dart';
 // import 'package:go_smart_admin/app/pos_cycle/views/home_screen.dart';
@@ -19,7 +9,6 @@
 // import 'package:go_smart_admin/styles/colors.dart';
 // import 'package:go_smart_admin/widget/buttons.dart';
 // import 'package:go_smart_admin/widget/unclosable_ok_dialog.dart';
->>>>>>> 2324e96 (staple)
 
 // import '../../../styles/text_style.dart';
 

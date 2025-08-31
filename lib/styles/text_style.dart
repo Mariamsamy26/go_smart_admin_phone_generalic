@@ -1,11 +1,7 @@
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
-<<<<<<< HEAD
-import 'package:go_smart_admin_windos/styles/colors.dart';
-=======
 import 'package:go_smart_admin/styles/colors.dart';
->>>>>>> 2324e96 (staple)
 
 var smallText = GoogleFonts.poppins();
 var mediumText = GoogleFonts.poppins(fontWeight: FontWeight.w500);

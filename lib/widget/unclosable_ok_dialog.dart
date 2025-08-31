@@ -2,11 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
-<<<<<<< HEAD
-import 'package:go_smart_admin_windos/styles/colors.dart';
-=======
 import 'package:go_smart_admin/styles/colors.dart';
->>>>>>> 2324e96 (staple)
 
 class UnClosableOkDialog extends StatelessWidget {
   final String text;

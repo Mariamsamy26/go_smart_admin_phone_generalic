@@ -1,17 +1,10 @@
 import 'package:easy_localization/easy_localization.dart' as ez;
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-<<<<<<< HEAD
-import 'package:go_smart_admin_windos/app/admin_caclye/pos_item_widget.dart';
-import 'package:go_smart_admin_windos/app/admin_caclye/provider/pos_provider.dart';
-import 'package:go_smart_admin_windos/helpers/application_dimentions.dart';
-import 'package:go_smart_admin_windos/styles/text_style.dart';
-=======
 import 'package:go_smart_admin/app/admin_caclye/pos_item_widget.dart';
 import 'package:go_smart_admin/app/admin_caclye/provider/pos_provider.dart';
 import 'package:go_smart_admin/helpers/application_dimentions.dart';
 import 'package:go_smart_admin/styles/text_style.dart';
->>>>>>> 2324e96 (staple)
 import 'package:provider/provider.dart';
 
 import '../../../../styles/colors.dart';
@@ -123,11 +116,7 @@ class _AllPosScreensState extends State<AllPosScreens> {
                                 child: GridView.builder(
                                   itemCount: posProviderWatch.allPos.data!.length,
                                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-<<<<<<< HEAD
-                                    crossAxisCount: 3,
-=======
                                     crossAxisCount: 1,
->>>>>>> 2324e96 (staple)
                                     childAspectRatio: 1.4.w,
                                     mainAxisSpacing: 30.w,
                                   ),

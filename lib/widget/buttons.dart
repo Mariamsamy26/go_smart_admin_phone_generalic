@@ -13,31 +13,11 @@ class BlueButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-<<<<<<< HEAD
-      height: 55.h,
-=======
       height: 30.h,
->>>>>>> 2324e96 (staple)
       child: ElevatedButton(
         style: ButtonStyle(
           backgroundColor: const WidgetStatePropertyAll(goSmartBlue),
           shape: WidgetStatePropertyAll(
-<<<<<<< HEAD
-            RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10.r),
-            ),
-          ),
-        ),
-        onPressed: onPressed,
-        child: Text(
-          label,
-          style: mediumText.copyWith(
-            fontSize: 18.sp,
-            color: white,
-            fontWeight: FontWeight.w600,
-          ),
-        ),
-=======
             RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.r)),
           ),
         ),
@@ -55,7 +35,6 @@ class BlueButton extends StatelessWidget {
   ),
 ),
 
->>>>>>> 2324e96 (staple)
       ),
     );
   }
@@ -75,26 +54,13 @@ class GreyButton extends StatelessWidget {
         style: ButtonStyle(
           backgroundColor: WidgetStatePropertyAll(Colors.grey[300]),
           shape: WidgetStatePropertyAll(
-<<<<<<< HEAD
-            RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10.r),
-            ),
-=======
             RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.r)),
->>>>>>> 2324e96 (staple)
           ),
         ),
         onPressed: onPressed,
         child: Text(
           label,
-<<<<<<< HEAD
-          style: mediumText.copyWith(
-            fontSize: 18.sp,
-            color: Colors.grey[800],
-          ),
-=======
           style: mediumText.copyWith(fontSize: 18.sp, color: Colors.grey[800]),
->>>>>>> 2324e96 (staple)
         ),
       ),
     );
@@ -114,27 +80,14 @@ class CancelButton extends StatelessWidget {
       child: ElevatedButton(
         style: ButtonStyle(
           shape: WidgetStatePropertyAll(
-<<<<<<< HEAD
-            RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10.r),
-            ),
-=======
             RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.r)),
->>>>>>> 2324e96 (staple)
           ),
           backgroundColor: const WidgetStatePropertyAll(
             Color.fromRGBO(251, 170, 171, 1),
           ),
         ),
         onPressed: onPressed,
-<<<<<<< HEAD
-        child: Text(
-          label,
-          style: boldText.copyWith(color: Colors.red),
-        ),
-=======
         child: Text(label, style: boldText.copyWith(color: Colors.red)),
->>>>>>> 2324e96 (staple)
       ),
     );
   }
@@ -143,14 +96,7 @@ class CancelButton extends StatelessWidget {
 class DisabledButton extends StatelessWidget {
   final String label;
 
-<<<<<<< HEAD
-  const DisabledButton({
-    super.key,
-    required this.label,
-  });
-=======
   const DisabledButton({super.key, required this.label});
->>>>>>> 2324e96 (staple)
 
   @override
   Widget build(BuildContext context) {
@@ -159,25 +105,12 @@ class DisabledButton extends StatelessWidget {
       child: ElevatedButton(
         style: ButtonStyle(
           shape: WidgetStatePropertyAll(
-<<<<<<< HEAD
-            RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10.r),
-            ),
-=======
             RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.r)),
->>>>>>> 2324e96 (staple)
           ),
           backgroundColor: const WidgetStatePropertyAll(Colors.grey),
         ),
         onPressed: null,
-<<<<<<< HEAD
-        child: Text(
-          label,
-          style: boldText.copyWith(color: Colors.white),
-        ),
-=======
         child: Text(label, style: boldText.copyWith(color: Colors.white)),
->>>>>>> 2324e96 (staple)
       ),
     );
   }
@@ -198,26 +131,15 @@ class BorderButton extends StatelessWidget {
           backgroundColor: const WidgetStatePropertyAll(Colors.white),
           shape: WidgetStatePropertyAll(
             RoundedRectangleBorder(
-<<<<<<< HEAD
-                borderRadius: BorderRadius.circular(10.r), side: const BorderSide(color: goSmartBlue, width: 2)),
-=======
               borderRadius: BorderRadius.circular(10.r),
               side: const BorderSide(color: goSmartBlue, width: 2),
             ),
->>>>>>> 2324e96 (staple)
           ),
         ),
         onPressed: onPressed,
         child: Text(
           label,
-<<<<<<< HEAD
-          style: mediumText.copyWith(
-            fontSize: 18.sp,
-            color: goSmartBlue,
-          ),
-=======
           style: mediumText.copyWith(fontSize: 18.sp, color: goSmartBlue),
->>>>>>> 2324e96 (staple)
         ),
       ),
     );
