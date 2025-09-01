@@ -5,13 +5,11 @@ import 'package:flutter/material.dart';
 class AuthProvider with ChangeNotifier {
   int _loadingPercentage = 0;
   CheckAdminLogin _checkAdminLogin = CheckAdminLogin();
-  // Login _loginData = Login();
 
   //* GETTERS
 
   int get loadingPercentage => _loadingPercentage;
   CheckAdminLogin get checkAdminLogin => _checkAdminLogin;
-  // Login get loginData => _loginData;
 
   set setLoadingPercentage(int value) {
     _loadingPercentage = value;

@@ -1,5 +1,6 @@
 import 'package:go_smart_admin/app/auth_branches_caclye/model/check_admin_login.dart';
 import 'package:go_smart_admin/app/auth_branches_caclye/model/login_model.dart';
+import 'package:go_smart_admin/app/auth_branches_caclye/model/pos_admin_conf.dart';
 import 'package:go_smart_admin/services/dio_client.dart';
 
 class AuthApis {
@@ -33,11 +34,11 @@ class AuthApis {
         return null;
       }
     } catch (e) {
-      throw 'login error >> $e';
+      throw 'signin error >> $e';
     }
   }
 
-  setClientuniqueId(String email, String uniqueId, String trim) async {
+  setClientuniqueId(String email, String uniqueId) async {
     String url = 'http://65.109.226.255:12000/set_client_unique_id';
 
     print(url);
@@ -51,7 +52,25 @@ class AuthApis {
         return null;
       }
     } catch (e) {
-      throw 'setClientuniqueId >> $e';
+      throw 'setClientuniqueId error >> $e';
+    }
+  }
+
+  Future<PosAdminConf?> getPosAdminConf() async {
+    String url = 'http://65.109.226.255:12000/pos_admin_conf';
+
+    print(url);
+
+    try {
+      final response = await Client.client.get(url);
+      if (response.statusCode == 200) {
+        PosAdminConf posAdminConf = PosAdminConf.fromJson(response.data);
+        return posAdminConf;
+      } else {
+        return null;
+      }
+    } catch (e) {
+      throw 'getPosAdminConf error >> $e';
     }
   }
 }

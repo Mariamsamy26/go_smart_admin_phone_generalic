@@ -12,6 +12,7 @@ import 'package:device_info_plus/device_info_plus.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_smart_admin/widget/loading_gif_dialog.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:go_smart_admin/helpers/navigation_helper.dart';
 import 'package:go_smart_admin/styles/colors.dart';
@@ -55,7 +56,6 @@ class _LoginScreenState extends State<LoginScreen> {
       deviceId = iosInfo.identifierForVendor ?? '';
     }
 
-    // AuthApis().setClientuniqueId(deviceId);
     setState(() {});
   }
 
@@ -68,28 +68,25 @@ class _LoginScreenState extends State<LoginScreen> {
     });
   }
 
-  Future<void> _lodinWithId() async {
-    //  if (emailController.text.isEmpty || passwordController.text.isEmpty|| deviceId!="") {
-    //     showDialog(
-    //       context: context,
-    //       builder: (context) => OkDialog(text: "Please enter email and password"),
-    //     );
-    //     return;
-    //   }
-    print(emailController.text.trim());
-    print(passwordController.text);
-    print(deviceId.trim());
+  Future<void> _loginWithId() async {
     await AuthApis().login(emailController.text.trim(), passwordController.text, deviceId.trim()).then((loginData) async {
-      print("object $deviceId");
+      await AuthApis().getPosAdminConf().then((posAdminConf) async {
+        bool shouldLoadId = posAdminConf?.data?.any((element) => element.bypassAccess == false) ?? false;
+        if (shouldLoadId) {
+          await AuthApis().setClientuniqueId(emailController.text.trim(), deviceId.trim());
+        }
+      });
+
       if (loginData == null) {
         Login();
       } else {
         context.read<PosProvider>().setLoginData = loginData;
-        //  Navigation().closeDialog(context);
+
         if (loginData.status == 1) {
           _loginAdminFlow();
         } else {
-          await AuthApis().setClientuniqueId(emailController.text.trim(), passwordController.text, deviceId.trim());
+          await AuthApis().setClientuniqueId(emailController.text.trim(), deviceId.trim());
+          Navigation().closeDialog(context);
           showDialog(
             context: context,
             builder: (context) => OkDialog(text: loginData.messageAr!),
@@ -117,19 +114,11 @@ class _LoginScreenState extends State<LoginScreen> {
         showDialog(
           context: context,
           builder: (_) => OkDialog(text: loginResponse.messageAr ?? 'login_failed'.tr()),
-        );
+        ).then((_) {
+          Navigation().closeDialog(context);
+        });
         return;
       }
-      if (loginResponse.status == 1 && loginResponse.role!.toLowerCase() != "admin") {
-        Navigation().closeDialog(context);
-        if (!mounted) return;
-        showDialog(
-          context: context,
-          builder: (_) => OkDialog(text: "غير مسموح لهذا الحساب بالدخول"),
-        );
-        return;
-      }
-
       final accountType = loginResponse.role ?? "";
 
       Navigation().closeDialog(context);
@@ -224,15 +213,21 @@ class _LoginScreenState extends State<LoginScreen> {
                       contentPadding: const EdgeInsets.all(15),
                       isDense: true,
                       border: loginRegisterTextBorder,
-                      errorBorder: loginRegisterTextBorder,
+                      errorBorder: errorBorder,
                       enabledBorder: loginRegisterTextBorder,
                       focusedBorder: loginRegisterTextBorder,
                       hintText: 'email'.tr(),
                     ),
-                    validator: (v) => (v == null || v.isEmpty) ? 'valid_value'.tr() : null,
+                    validator: (text) {
+                      if (text?.isEmpty ?? false) {
+                        return "الرجاء ادخال البريد الالكتروني";
+                      }
+                      return null;
+                    },
                   ),
 
                   const SizedBox(height: 15),
+
                   Text(
                     'password'.tr(),
                     style: TextStyle(color: black, fontSize: 16, fontWeight: FontWeight.bold),
@@ -247,7 +242,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       contentPadding: const EdgeInsets.all(15),
                       isDense: true,
                       border: loginRegisterTextBorder,
-                      errorBorder: loginRegisterTextBorder,
+                      errorBorder: errorBorder,
                       enabledBorder: loginRegisterTextBorder,
                       focusedBorder: loginRegisterTextBorder,
                       hintText: 'password'.tr(),
@@ -256,14 +251,24 @@ class _LoginScreenState extends State<LoginScreen> {
                         onPressed: () => setState(() => isHidden = !isHidden),
                       ),
                     ),
-                    validator: (v) => (v == null || v.trim().isEmpty) ? 'valid_value'.tr() : null,
+                    validator: (text) {
+                      if (text?.isEmpty ?? false) {
+                        return "الرجاء ادخال كلمة المرور";
+                      }
+                      return null;
+                    },
                   ),
 
                   SizedBox(height: 60.h),
                   SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
-                      onPressed: _lodinWithId,
+                      onPressed: () {
+                        if (formKey.currentState!.validate()) {
+                          Navigation().showLoadingGifDialog(context);
+                          _loginWithId();
+                        }
+                      },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: goSmartBlue,
                         padding: const EdgeInsets.symmetric(vertical: 14),
